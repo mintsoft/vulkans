@@ -1,0 +1,14 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:584: checking for a BSD compatible install
+configure:637: checking whether build environment is sane
+configure:694: checking whether make sets ${MAKE}
+configure:741: checking for working aclocal
+configure:754: checking for working autoconf
+configure:767: checking for working automake
+configure:780: checking for working autoheader
+configure:793: checking for working makeinfo
+configure:808: checking whether to enable maintainer-specific portions of Makefiles
+configure:902: checking for gnome-config
+configure:1117: checking for gnomeConf.sh file in /usr/local/lib

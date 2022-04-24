@@ -1,0 +1,15 @@
+
+ Gnome Tesserae TODO List
+ ------------------------------------------
+
+ As of July 8, 2001, these are some of the things that need doing:
+
+  1. Animated tile movement
+  2. Tiles need to be prettier
+  3. Internationalization & localization
+  4. Support for multiple tile sets
+  5. Help files need to be converted to SGML
+     (or they need to include an interactive tutorial somehow)
+  6. Tarball packaging & RPM .spec needs checking
+  7. Debian packaging needs doing
+  8. Inclusion in standard Gnome Games package needs to be investigated

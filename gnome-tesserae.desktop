@@ -1,0 +1,7 @@
+[Desktop Entry]
+Icon=gnome-tesserae.png
+Name=Gnome Tesserae
+Comment=A game of tile layering
+Exec=gnome-tesserae
+Terminal=0
+Type=Application

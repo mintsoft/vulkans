@@ -1,0 +1,40 @@
+Gnome Tesserae
+==============
+
+Gnome Tesserae is a game of tile layering based on Matt Mullen's
+PC-Tesserae for DOS (http://www.mattmullen.net/).
+
+Installation
+--------------
+Please see the file named `INSTALL'.  If you're compiling and
+installing by hand, be sure to heed the instructions regarding where
+to install the program.
+
+Help Wanted
+--------------
+
+If you're interested in helping out with any of the items in the
+`TODO' file, please let me know.  I'm particularly anxious to get the
+game's strings translated and to have Debian binary packages built.
+
+License
+--------------
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+Feedback
+--------------
+Please direct comments and suggestions here:
+
+   Nathan Thompson-Amato <ndt@wagonfixers.com>
