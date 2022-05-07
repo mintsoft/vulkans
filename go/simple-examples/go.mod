@@ -9,4 +9,8 @@ require (
 	github.com/xlab/closer v0.0.0-20190328110542-03326addb7c2
 )
 
-require github.com/xlab/linmath v0.0.0-20170502193301-512668b827be // indirect
+require (
+	github.com/go-gl/glfw v0.0.0-20220320163800-277f93cfa958 // indirect
+	github.com/go-gl/glfw/v3.3/glfw v0.0.0-20220320163800-277f93cfa958 // indirect
+	github.com/xlab/linmath v0.0.0-20170502193301-512668b827be // indirect
+)

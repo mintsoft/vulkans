@@ -5,8 +5,8 @@ import (
 	"runtime"
 	"time"
 
+	"github.com/go-gl/glfw/v3.3/glfw"
 	as "github.com/vulkan-go/asche"
-	"github.com/vulkan-go/glfw/v3.3/glfw"
 	vk "github.com/vulkan-go/vulkan"
 	"github.com/xlab/closer"
 )
@@ -98,6 +98,9 @@ func main() {
 	window, err := glfw.CreateWindow(int(reqDim.Width), int(reqDim.Height), "ExampleApplication (GLFW)", nil, nil)
 	orPanic(err)
 	app.windowHandle = window
+	runningwidth, runningheight := window.GetSize()
+
+	log.Printf("Running with: %d x %d", runningwidth, runningheight)
 
 	// creates a new platform, also initializes Vulkan context in the app
 	platform, err := as.NewPlatform(app)
