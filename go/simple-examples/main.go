@@ -16,8 +16,16 @@ func init() {
 	log.SetFlags(log.Lshortfile)
 }
 
+type ExampleApplication struct {
+	as.BaseVulkanApp
+}
+
+func (s *ExampleApplication) Destroy() {}
+
+func (s *ExampleApplication) NextFrame() {}
+
 type Application struct {
-	*vulkancube.SpinningCube
+	*ExampleApplication
 	debugEnabled bool
 	windowHandle *glfw.Window
 }
@@ -32,7 +40,7 @@ func (a *Application) VulkanSurface(instance vk.Instance) (surface vk.Surface) {
 }
 
 func (a *Application) VulkanAppName() string {
-	return "VulkanCube"
+	return "ExampleApplication"
 }
 
 func (a *Application) VulkanLayers() []string {
@@ -59,7 +67,7 @@ func (a *Application) VulkanDeviceExtensions() []string {
 
 func (a *Application) VulkanSwapchainDimensions() *as.SwapchainDimensions {
 	return &as.SwapchainDimensions{
-		Width: 500, Height: 500, Format: vk.FormatB8g8r8a8Unorm,
+		Width: 1280, Height: 720, Format: vk.FormatB8g8r8a8Unorm,
 	}
 }
 
@@ -73,9 +81,8 @@ func (a *Application) VulkanInstanceExtensions() []string {
 
 func NewApplication(debugEnabled bool) *Application {
 	return &Application{
-		SpinningCube: vulkancube.NewSpinningCube(1.0),
-
-		debugEnabled: debugEnabled,
+		ExampleApplication: &ExampleApplication{},
+		debugEnabled:       debugEnabled,
 	}
 }
 
@@ -88,7 +95,7 @@ func main() {
 	app := NewApplication(true)
 	reqDim := app.VulkanSwapchainDimensions()
 	glfw.WindowHint(glfw.ClientAPI, glfw.NoAPI)
-	window, err := glfw.CreateWindow(int(reqDim.Width), int(reqDim.Height), "VulkanCube (GLFW)", nil, nil)
+	window, err := glfw.CreateWindow(int(reqDim.Width), int(reqDim.Height), "ExampleApplication (GLFW)", nil, nil)
 	orPanic(err)
 	app.windowHandle = window
 
@@ -127,15 +134,6 @@ func main() {
 			}
 			glfw.PollEvents()
 			app.NextFrame()
-
-			imageIdx, outdated, err := app.Context().AcquireNextImage()
-			orPanic(err)
-			if outdated {
-				imageIdx, _, err = app.Context().AcquireNextImage()
-				orPanic(err)
-			}
-			_, err = app.Context().PresentImage(imageIdx)
-			orPanic(err)
 		}
 	}
 }
